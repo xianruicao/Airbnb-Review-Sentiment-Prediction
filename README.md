@@ -18,8 +18,8 @@ Online reviews contain far more detail than star ratings alone. In this project,
 
 ## Main Files
 
-- `Xianrui_Elvis_Román_Notebook.ipynb`: main notebook with the full analysis pipeline
-- `Xianrui_Elvis_Román_Documentation.pdf`: project report and supporting documentation
+- `airbnb_review_sentiment_prediction.ipynb`: main notebook with the full analysis pipeline
+- `airbnb_review_sentiment_prediction_report.pdf`: project report and supporting documentation
 - `requirements.txt`: Python dependencies needed to run the notebook
 - `README.md`: repository overview and usage instructions
 
@@ -164,8 +164,8 @@ Some of the strongest negative terms identified in the notebook include:
 .
 ├── README.md
 ├── requirements.txt
-├── Xianrui_Elvis_Román_Documentation.pdf
-└── Xianrui_Elvis_Román_Notebook.ipynb
+├── airbnb_review_sentiment_prediction.ipynb
+└── airbnb_review_sentiment_prediction_report.pdf
 ```
 
 The raw dataset is intentionally excluded from version control through `.gitignore`.
@@ -177,7 +177,7 @@ The raw dataset is intentionally excluded from version control through `.gitigno
 If you already have a Python/Jupyter environment, open:
 
 ```bash
-jupyter notebook Xianrui_Elvis_Román_Notebook.ipynb
+jupyter notebook airbnb_review_sentiment_prediction.ipynb
 ```
 
 or
