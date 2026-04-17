@@ -18,8 +18,10 @@ Online reviews contain far more detail than star ratings alone. In this project,
 
 ## Main Files
 
-- `airbnb_review_sentiment_prediction.ipynb`: main notebook with the full analysis pipeline
-- `airbnb_review_sentiment_prediction_report.pdf`: project report and supporting documentation
+- `notebooks/airbnb_review_sentiment_prediction.ipynb`: main notebook with the full analysis pipeline
+- `reports/airbnb_review_sentiment_prediction_report.pdf`: project report and supporting documentation
+- `data/`: local data staging area for raw and processed files
+- `outputs/`: local export area for figures and tables
 - `requirements.txt`: Python dependencies needed to run the notebook
 - `README.md`: repository overview and usage instructions
 
@@ -32,6 +34,8 @@ This repository intentionally does **not** include the raw `reviews.csv` file:
 - the file is large and would make the repository unnecessarily heavy
 - the project is easier to clone and review when only code and documentation are versioned
 - the notebook already uses hosted CSV files for translated and preprocessed text
+- local raw datasets belong in `data/raw/`
+- local processed datasets belong in `data/processed/`
 
 At the moment, the notebook retrieves:
 
@@ -158,17 +162,30 @@ Some of the strongest negative terms identified in the notebook include:
 - `expensive`
 - `small`
 
-## Repository Structure
+## Folder Structure
 
 ```text
-.
-├── README.md
-├── requirements.txt
-├── airbnb_review_sentiment_prediction.ipynb
-└── airbnb_review_sentiment_prediction_report.pdf
+Airbnb-Review-Sentiment-Prediction/
+├── notebooks/
+│   └── airbnb_review_sentiment_prediction.ipynb     <- Main analysis notebook
+├── reports/
+│   └── airbnb_review_sentiment_prediction_report.pdf <- Written project report
+├── scripts/
+│   └── .gitkeep                                     <- Placeholder for future Python scripts
+├── data/
+│   ├── README.md                                    <- Explains local data usage
+│   ├── raw/                                         <- Local raw datasets such as reviews.csv
+│   └── processed/                                   <- Local cleaned datasets and exports
+├── outputs/
+│   ├── README.md                                    <- Explains where generated artifacts go
+│   ├── figures/                                     <- Saved plots and charts
+│   └── tables/                                      <- Exported result tables
+├── requirements.txt                                 <- Python dependencies
+├── .gitignore                                       <- Ignore rules for data and outputs
+└── README.md                                        <- Project overview and setup guide
 ```
 
-The raw dataset is intentionally excluded from version control through `.gitignore`.
+The `data/raw/`, `data/processed/`, `outputs/figures/`, and `outputs/tables/` folders are ignored by Git apart from placeholder files, so classmates can keep local datasets and generated files without bloating the repository.
 
 ## How To Run
 
@@ -177,7 +194,7 @@ The raw dataset is intentionally excluded from version control through `.gitigno
 If you already have a Python/Jupyter environment, open:
 
 ```bash
-jupyter notebook airbnb_review_sentiment_prediction.ipynb
+jupyter notebook notebooks/airbnb_review_sentiment_prediction.ipynb
 ```
 
 or
@@ -211,7 +228,7 @@ python -m spacy download en_core_web_sm
 python -m textblob.download_corpora
 ```
 
-Then start Jupyter and open the notebook.
+Then start Jupyter and open the notebook from the `notebooks/` folder.
 
 Note: `requirements.txt` installs Python packages only. The spaCy English model still needs to be downloaded separately with `python -m spacy download en_core_web_sm`.
 

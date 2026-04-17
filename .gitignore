@@ -1,4 +1,16 @@
+# Local raw and processed data
 reviews.csv
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Generated outputs
+outputs/figures/*
+!outputs/figures/.gitkeep
+outputs/tables/*
+!outputs/tables/.gitkeep
+
 .DS_Store
 .ipynb_checkpoints/
 __pycache__/
