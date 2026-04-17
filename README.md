@@ -20,6 +20,7 @@ Online reviews contain far more detail than star ratings alone. In this project,
 
 - `Xianrui_Elvis_Román_Notebook.ipynb`: main notebook with the full analysis pipeline
 - `Xianrui_Elvis_Román_Documentation.pdf`: project report and supporting documentation
+- `requirements.txt`: Python dependencies needed to run the notebook
 - `README.md`: repository overview and usage instructions
 
 ## Dataset
@@ -162,6 +163,7 @@ Some of the strongest negative terms identified in the notebook include:
 ```text
 .
 ├── README.md
+├── requirements.txt
 ├── Xianrui_Elvis_Román_Documentation.pdf
 └── Xianrui_Elvis_Román_Notebook.ipynb
 ```
@@ -198,7 +200,7 @@ source .venv/bin/activate
 Install the main dependencies:
 
 ```bash
-pip install pandas numpy matplotlib nltk spacy tqdm scikit-learn gensim scipy wordcloud textblob jupyter
+pip install -r requirements.txt
 ```
 
 Download the required language resources:
@@ -210,6 +212,8 @@ python -m textblob.download_corpora
 ```
 
 Then start Jupyter and open the notebook.
+
+Note: `requirements.txt` installs Python packages only. The spaCy English model still needs to be downloaded separately with `python -m spacy download en_core_web_sm`.
 
 ## Reproducibility Notes
 

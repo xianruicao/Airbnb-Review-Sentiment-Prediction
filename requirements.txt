@@ -1,0 +1,17 @@
+# Core data stack
+pandas
+numpy
+matplotlib
+scipy
+scikit-learn
+
+# NLP and topic modeling
+nltk
+spacy
+gensim
+textblob
+wordcloud
+tqdm
+
+# Notebook runtime
+jupyter
